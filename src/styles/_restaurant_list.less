@@ -1,0 +1,142 @@
+restaurant-list {
+	padding-top: 40px;
+	width: 100%;
+	display: grid;
+	gap: 16px;
+	
+}
+
+.restaurant_item {
+	border: @restaurant_item_border;
+	border-radius: 8px;
+	overflow: hidden;
+	position: relative;
+	transition: box-shadow 0.3s ease;
+	
+	&:hover {
+	box-shadow: 0 4px 8px 0 #00000033;
+	}
+}
+	
+.restaurant_thumbnail {
+	position: relative;
+	padding-bottom: 56.2%;
+	background: @restaurant_thumbnail_background;
+	
+	img,
+	.skeleton_body {
+	position: absolute;
+	object-fit: cover;
+	width: 100%;
+	height: 100%;
+	}
+	
+	img {
+	z-index: -1;
+	}
+}
+.restaurant_content {
+	padding: 24px;
+	display: grid;
+	grid-template-columns: 1fr auto;
+	grid-template-rows: auto 1fr;
+	grid-column-gap: 16px;
+}
+	  
+.restaurant_name {
+	font-size: @restaurant_name_font-size;
+	font-weight: 600;
+	color: @primary-color;
+	padding: 8px 0 8px;
+	display: inline-block;
+	text-decoration: none;
+	transition: color 0.3s;
+	grid-column: 1;
+	grid-row: 2;
+	align-self: center;
+
+	&:hover {
+		color: darken(@primary-color, 10%);
+		}
+}
+	  
+.restaurant_city,
+.restaurant_rating {
+	color: #6E4A02;
+	padding: 8px 8px 8px 18px;
+	align-self: center;
+}
+.city{
+	width: 16px;
+	height: 16px;
+	grid-column: 2;
+	grid-row: 2;
+	align-self: center;
+}
+.rating {
+	width: 16px;
+	height: 16px;
+	grid-column: 3;
+	grid-row: 2;
+	align-self: center;
+	left: 10px;
+}
+.restaurant_city {
+	grid-column: 2;
+	grid-row: 2;
+}
+	  
+.restaurant_rating {
+	grid-column: 3;
+	grid-row: 2;
+}
+ 
+.restaurant_description {
+	line-height: 1.7;
+	color: @dark-color;
+	font-size: @restaurant_desc_font-size;
+	overflow: hidden;
+	text-overflow: clip;
+	text-align: justify;
+	display: -webkit-box;
+	-webkit-line-clamp: @restaurant_desc_max-lines;
+	-webkit-box-orient: vertical;
+	grid-column: 1 / 4;
+	grid-row: 3;
+}
+.restaurant-list {
+	padding-top: 40px;
+	width: 100%;
+	display: grid;
+	gap: 16px;
+}
+		
+.restaurant_item {
+	border: @restaurant_item_border;
+	border-radius: 8px;
+	overflow: hidden;
+	position: relative;
+	transition: box-shadow 0.3s ease;
+		
+	&:hover {
+	box-shadow: 0 4px 8px 0 #00000033;
+	}
+}
+		
+.restaurant_thumbnail {
+	position: relative;
+	padding-bottom: 56.2%;
+	background: @restaurant_thumbnail_background;
+		
+	img,
+	.skeleton_body {
+	position: absolute;
+	object-fit: cover;
+	width: 100%;
+	height: 100%;
+	}
+		
+	img {
+		z-index: -1;
+		}
+}

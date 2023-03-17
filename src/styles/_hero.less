@@ -1,0 +1,39 @@
+hero-element {
+	align-content: center;
+	background-position: center;
+	background: rgba(0, 0, 0, 0.5);
+	color: white;
+	display: grid;
+	height: @hero_height;
+	padding: 24px;
+	position: relative;
+	text-align: center;
+	width: 100%;
+
+  picture,
+  img {
+    width: 100%;
+    height: 100%;
+  }
+
+  picture {
+    position: absolute;
+    z-index: -1;
+  }
+
+  img {
+    object-fit: cover;
+  }
+}
+.hero_heading {
+	font-size: @hero_heading_font-size_sm;
+}
+.hero_subheading {
+	font-size: @hero_subheading_font-size_sm;
+	margin: 0.5em 0 2em;
+}
+.hero_tagline {
+	font-family: @hero_tagline_font;
+	font-size: @hero_tagline_font-size_sm;
+	font-style: italic;
+}

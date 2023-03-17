@@ -1,0 +1,19 @@
+button {
+	min-height: 44px;
+	&:hover {
+		box-shadow: 0 4px 8px 0 #000000 33;
+	}
+}
+button>.btn_loading {
+	animation: 1s linear infinite loading;
+	border-radius: 50%;
+	border-right-color: @accent-color;
+	border: 2px solid white;
+	display: none;
+	height: 20px;
+	margin: 0 16px 0 0;
+	width: 20px;
+}
+@keyframes loading {
+	to { transform: rotate(360deg); }
+}

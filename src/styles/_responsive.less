@@ -1,0 +1,156 @@
+@media screen and (max-width: (@tablet - 0.1px)) {
+	
+	body.hideoverflow {
+	  overflow: hidden !important;
+	}
+  
+	.restaurant_content {
+		grid-template-columns: 1fr;
+		grid-template-rows: auto auto 1fr;
+	}
+	
+	.restaurant_name{
+		padding: 8px 0 8px;
+}
+	.restaurant_city,
+	.restaurant_rating {
+		padding: 8px 8px 8px 18px;
+}
+	
+	.restaurant_name{
+		grid-column: 1;
+		grid-row: 1;
+	}
+	
+	.city{
+		width: 16px;
+		height: 16px;
+		grid-column: 1;
+		grid-row: 2;
+		align-self: center;
+	}
+	.rating {
+		width: 16px;
+		height: 16px;
+		grid-column: 2;
+		grid-row: 2;
+		align-self: center;
+		left: 10px;
+	}
+	.restaurant_city {
+		grid-column: 1;
+		grid-row: 2;
+	}
+	
+	.restaurant_rating {
+		grid-column: 2;
+		grid-row: 2;
+	}
+	
+	.restaurant_description {
+		grid-column: 1/3;
+		grid-row: 4;
+	}
+	.menu_open .menu {
+		height: 100%;
+	}
+  
+	app-bar.menu_open {
+		background-color: @bg-color;
+	}
+  
+	.menu_item {
+	  border-bottom: @menu_border;
+	}
+}
+
+@media screen and (min-width: @tablet) {
+	
+	.container {
+	  max-width: 100%;
+	}
+  
+	.menu {
+	  position: static;
+	  display: block;
+	  height: auto;
+	  background-color: transparent;
+	}
+  
+	.nav-toggle {
+	  display: none;
+	}
+  
+	.menu_list {
+	  padding: 0;
+	}
+  
+	.menu_item {
+	  display: inline-block;
+  
+	  a {
+		padding: 16px;
+	  }
+	}
+  
+	.hero_heading {
+	  font-size: @hero_heading_font-size;
+	}
+  
+	.hero_subheading {
+	  font-size: @hero_subheading_font-size;
+	  margin: 0.5em 0 2em;
+	}
+  
+	.hero_tagline {
+	  font-size: @hero_tagline_font-size;
+	}
+  
+	restaurant-list {
+	  grid-template-columns: repeat(2, 1fr);
+	}
+  
+	.restaurant_name {
+	  font-size: 1.25em;
+	}
+  
+	.restaurant_description {
+	  font-size: 0.95em;
+	}
+  
+	restaurant-details p {
+	  font-size: 0.95em;
+	}
+  
+	.info {
+	  grid-template-columns: 2fr 1fr;
+	}
+  
+	.main-info {
+	  order: 2;
+	}
+  
+	.menus {
+	  grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+@media screen and (min-width: @desktop) {
+	
+	.container {
+	  max-width: 1200px;
+	}
+  
+	restaurant-list {
+	  grid-template-columns: repeat(3, 1fr);
+	}
+  
+	.desc_content {
+	  grid-template-columns: repeat(2, 1fr);
+	}
+  
+	.thumbnail {
+	  order: 1;
+	}
+}
+	

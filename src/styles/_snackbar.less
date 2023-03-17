@@ -1,0 +1,40 @@
+#snackbar {
+	background: linear-gradient(90deg, #FDBB2D 0%, #22C1C3 100%);
+	border-radius: 8px;
+	top: 80px;
+	left: 50%; /* Position snackbar at the horizontal center of the screen */
+	transform: translate(-50%, -50%);
+	color: #222222;
+	font-size: 17px;
+	max-width: 250px;
+	padding: 16px;
+	position: fixed;
+	text-align: center;
+	visibility: hidden;
+	z-index: 9999;
+}
+#snackbar.show {
+	animation: fadein 0.5s, fadeout 0.5s 2.5s;
+	visibility: visible;
+}
+@keyframes fadein {
+	from {
+	  top: 0;
+	  opacity: 0;
+	}
+	to {
+	  top: 80px;
+	  opacity: 1;
+	}
+}
+  
+@keyframes fadeout {
+	from {
+	  top: 80px;
+	  opacity: 1;
+	}
+	to {
+	  top: 0;
+	  opacity: 0;
+	}
+}

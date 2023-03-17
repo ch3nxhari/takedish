@@ -1,0 +1,61 @@
+html {
+	scroll-behavior: smooth;
+	scroll-padding-top: @app_bar_height;
+}
+* {
+	box-sizing: border-box;
+	margin: 0;
+}
+body {
+	display: flex;
+	flex-direction: column;
+	font-family: @main_font;
+	padding: 0;
+}
+main {
+	min-height: calc(100vh + (@hero_height - 100px));
+}
+favorite-page,
+detail-page {
+  display: block;
+  padding-top: (@app_bar_height + 32px) !important;
+}
+.skip-link {
+	background-color: @accent-color;
+	color: white;
+	left: 16px;
+	padding: 8px;
+	position: absolute;
+	top: -50px;
+	z-index: 100;
+	&:focus {
+		top: @app_bar_height + 4px;
+	}
+}
+.container {
+	margin: auto;
+	max-width: 100%;
+	padding: 0 16px;
+	
+	.latest h1 {
+		font-weight: 700;
+		font-size: 2em;
+		text-align: center;
+		padding-top: 1rem;	
+	}
+}	
+
+.message {
+	line-height: 1.5;
+	margin: 40px 16px 16px;
+	text-align: center;
+}
+.message_heading {
+	font-size: 2em;
+	color: @primary-color;
+}
+.message_image {
+	width: 214px;
+	height: 214px;
+	z-index: inherit;
+}
